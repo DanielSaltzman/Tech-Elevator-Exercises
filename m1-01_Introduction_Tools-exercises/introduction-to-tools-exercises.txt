@@ -31,7 +31,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+home directory
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
@@ -39,14 +39,17 @@ actual command from other text in Unix documentation.
     This can be easily accomplished with the "pwd" command.
 ----
 
-$ pwd
 <type or copy-paste the result here>
+/Users/dsaltzman/Development/danielsaltzman-java-blue-exercises/m1-01_Introduction_Tools-exercises/java-helloworld
 
 The present working directory displayed should match the directory you changed 
 to in Exercise 1.  Note, the two may not match at the very beginning if you
 used the tilde when changing directories.  The tilde is a convenience to save 
 you some typing.  The system resolves the tilde to the full location as it
 changes directory, and the "pwd" command reflects this.
+
+/Users/dsaltzman/Development/danielsaltzman-java-blue-exercises/m1-01_Introduction_Tools-exercises
+Techs-MacBook-Air-27:m1-01_Introduction_Tools-exercises dsaltzman$ 
 
 
 ----
@@ -56,6 +59,14 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
+
+
+total 8
+drwxr-xr-x  5 dsaltzman  staff   160 Jan 14 16:33 .
+drwxr-xr-x  4 dsaltzman  staff   128 Jan 14 16:33 ..
+drwxr-xr-x  3 dsaltzman  staff    96 Jan 14 16:33 database
+-rw-r--r--  1 dsaltzman  staff  1091 Jan 14 16:33 pom.xml
+drwxr-xr-x  4 dsaltzman  staff   128 Jan 14 16:33 src
 <type or copy-paste the result here>
 
 
@@ -65,12 +76,12 @@ $ ls -la
 ----
 
 <type or copy-paste your answer here>
-
+"." represents current directory, ".." represents parent file
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
-
+-rw-r--r--  1 dsaltzman  staff  1091 Jan 14 16:33 pom.xml
 <type or copy-paste your answer here>
 
 
@@ -78,7 +89,10 @@ $ ls -la
 7.  What are the names of the folders, including any dot-folders, displayed in 
     the directory listing in Exercise 4?
 ----
-
+drwxr-xr-x  5 dsaltzman  staff   160 Jan 14 16:33 .
+drwxr-xr-x  4 dsaltzman  staff   128 Jan 14 16:33 ..
+drwxr-xr-x  3 dsaltzman  staff    96 Jan 14 16:33 database
+drwxr-xr-x  4 dsaltzman  staff   128 Jan 14 16:33 src
 <type or copy-paste your answer here>
 
 
