@@ -418,18 +418,25 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+		int cardsCollected = 94;
+		int cardInBox = 8;
+		int cardsInUnfilledBox = 94 % 8;
+		
         /*
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+		int numberOfBooks = 210;
+		int totalShelves = 10;
+		int booksOnShelves = 210 / 10;
         /*
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+		double crouissantsBaked = 17;
+		double guests = 7;
+		double croissantsPerGuest = 17 / 7;
         /*
             CHALLENGE PROBLEMS
         */
