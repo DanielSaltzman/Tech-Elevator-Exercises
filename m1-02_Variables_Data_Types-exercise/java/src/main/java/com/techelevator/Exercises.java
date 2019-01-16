@@ -407,6 +407,10 @@ public class Exercises {
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+		int totalPictures = 480;
+		int albumContains = 20;
+		int totalAlbums = totalPictures / albumContains;
+		
 		
         /*
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
