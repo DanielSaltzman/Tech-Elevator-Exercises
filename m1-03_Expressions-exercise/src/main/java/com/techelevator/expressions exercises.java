@@ -46,12 +46,8 @@ public class Exercises {
 			else { 
 				return a + b;
 			}
+		} 
 	
-	
-	
-	} 
-	
-      
 	/*
 	 4. Given an int n, return the absolute difference between n and 21, except return double the absolute
 	 difference if n is over 21.
@@ -115,14 +111,17 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		if ((negative == false) && ((a > 0 && b < 0) || (a < 0 && b > 0))) {
-				return true; }
-		else { if ((negative == true) && a < 0 && b < 0)
-				return true;
-		}
 		
-		return false;
-	}
+			if ((negative == true) && a < 0 && b < 0) {
+				return true;
+			} else { if ((a < 0 && b > 0) || a > 0 && b < 0)
+				return true;
+			} {
+				return false;
+			}
+			
+	
+	}	
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
@@ -131,7 +130,7 @@ public class Exercises {
  	 or35(10) → true
 	 or35(8) → false
 	 */
-		public boolean or35(int n) {
+	public boolean or35(int n) {
 		
 		if ((n % 3 == 0) || n % 5 == 0) {
 			return true;
@@ -147,15 +146,15 @@ public class Exercises {
 	 icyHot(-1, 120) → true
 	 icyHot(2, 120) → false
 	 */
-		public boolean icyHot(int temp1, int temp2) {
-			if (temp1 < 0 && temp2 > 100) {
-				return true;
-			} if (temp1 > 100 && temp2 < 0) {
-				return true;
-			} {
-				return false;
-			}
+	public boolean icyHot(int temp1, int temp2) {
+		if (temp1 < 0 && temp2 > 100) {
+			return true;
+		} if (temp1 > 100 && temp2 < 0) {
+			return true;
+		} {
+			return false;
 		}
+	}
 
 	/*
 	 10. Given 2 int values, return true if either of them is in the range 10..20 inclusive.
@@ -164,9 +163,6 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
-		if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20))
-			return true;
-		
 		return false;
 	}
 
@@ -178,10 +174,6 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
-		
-		if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19)) 
-			return true;
-		 
 		return false;
 	}
 
@@ -193,9 +185,7 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
-		if (((a >= 13 && a <= 19) && (b < 13 || b > 19)) || ((b >= 13 && b <= 19) && (a < 13 || a > 19)))
-		return true;
-	return false;
+		return false;
 	}
 
 	/*
@@ -205,14 +195,9 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
-		if ((a >= b) && (a > c))
-		return a; 
-		else if ((b >= a) && (b > c))
-			return b; 
-		return c;
-	
+		return 0;
 	}
-	
+
 	/*
 	 14. Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both
 	 in the range 40..50 inclusive.
@@ -221,8 +206,6 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
-		if (((a >= 30 && a <= 40 || a >= 40 && a <= 50) && (b >= 30 && b <=40 || b >=40 && b <= 50)))
-			return true;
 		return false;
 	}
 
@@ -234,21 +217,9 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		if ((a >= 10 && a <= 20) && (b >=10 && b <= 20)) {
-		if (a > b) {
-		return a;}
-		else {
-			return b;}
-		} else if ((a >= 10 && a <= 20) && (b < 10 || b > 20))
-		{
-			return a;
-		} else if ((b >= 10 && b <= 20) && (a < 10 || a > 20)) {
-		return b; }
 		return 0;
 	}
-			
-			
-	
+
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
  	 when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case
@@ -259,16 +230,8 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
-		if ((cigars > 39) && (cigars < 61)) {
-			return true; 
-			}
-		else if (cigars < 40 ) {
-			return false;
-		} else if ( isWeekend == true ) {
-			return true;
-		}
 		return false;
-	} 
+	}
 
 	/*
 	 17. You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness
@@ -282,13 +245,8 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		if (( you <= 2) || (date <= 2)) {
-			return 0;
-		} else if ((you >= 8) || (date >= 8)) {
-			return 2;
-		}	return 1;
-		}
-	
+		return 0;
+	}
 
 	/*
 	 18. The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature
@@ -299,16 +257,8 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
-		if (( temp > 59) && (temp < 91)) {
-			return true; 
-		} else if (temp < 60) {
-			return false;
-		} else if ( temp > 100)
-		{return false;	}
-		else if (( temp > 90) && (temp < 101) && (isSummer == true))
-		{ return true;
-		} return false;
-		}
+		return false;
+	}
 
 	/*
 	 19. You are driving a little too fast, and a police officer stops you. Write code to compute the result,
@@ -320,20 +270,7 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		if (( speed < 66) && ( isBirthday == true))
-		{	return 0; 
-		} else if (( speed > 64) && (speed < 86) && ( isBirthday == true))
-		{ return 1;
-		} else if (( speed > 84) && ( isBirthday == true )) {
-			return 2;}
-		else if ( speed < 61) {
-			return 0;
-		}
-		else if (( speed > 59) && ( speed < 81)) {
-			return 1;
-		} else if ( speed > 79) { 
-			return 2;
-		} return 0;
+		return 0;
 	}
 
 	/*
@@ -344,12 +281,8 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		if ( a + b < 10 || a + b > 20) {
-			return a + b;
-		}
-		return 20;
-		}
-	
+		return 0;
+	}
 
 	/*
 	 21. Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are
@@ -361,14 +294,6 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
-		if ( vacation == true) {
-			if (( day == 0) || ( day == 6)) {
-				return "off";
-			} return "10:00"; }
-		else if (( day == 0) || ( day == 6))
-		{ return "10:00";		
-			} else if ((day > 0) && ( day < 6))
-			{ return "7:00";	}
 		return "";
 	}
 
@@ -380,15 +305,8 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
-		if ( outsideMode == true) {
-			if (( n <= 1) || ( n >= 10)) {
-				return true; }
-					return false;
-				} else if ((n >= 1) && (n <= 10)) {
-					return true;
-				} return false;
-			}
-		
+		return false;
+	}
 
 	/*
 	 23. We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
@@ -399,12 +317,8 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
-		if (( n % 11 == 0) || ( n % 11 == 1))
-		{ return true;
-		}
 		return false;
-		}
-	
+	}
 
 	/*
 	 24. Return true if the given non-negative number is 1 or 2 more than a multiple of 20.
@@ -414,11 +328,8 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
-		if (( n % 20 == 1) || ( n % 20 == 2)) {
-			return true;
-		} return false;
-		}
-	
+		return false;
+	}
 
 	/*
 	 25. Return true if the given non-negative number is a multiple of 3 or 5, but not both.
@@ -428,11 +339,7 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
-		if (( n % 3 == 0) && ( n % 5 == 0))
-		{ return false;
-		} if (( n % 3 == 0) || (n % 5 == 0)) { 
-			return true;
-		} return false;
+		return false;
 	}
 
 	/*
@@ -444,12 +351,8 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
-		if ((( n + 1) % 20 == 0) || (( n + 2) % 20 == 0))
-				{ return true;
-				}
 		return false;
-				}
-	
+	}
 
 	/*
 	 27. Given a non-negative number "num", return true if num is within 2 of a multiple of 10. Note: (a % b)
@@ -459,11 +362,8 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-	if ((( num + 1) % 10 == 0) || (( num + 2) % 10 == 0) || (( num - 2) % 10 == 0) || (( num - 1) % 10 == 0) || (num % 10 == 0))
-		{ return true;
-		} return false;
-		}
-	
+		return false;
+	}
 
 	/*
 	 28. Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19 inclusive, are
@@ -473,11 +373,8 @@ public class Exercises {
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
-		if ((( a >= 13) && ( a <= 19)) || (( b >= 13) && (b <= 19))) {
-			return 19;
-		} return a+b;
-		}
-	
+		return 0;
+	}
 
 	/*
 	 29. Your cell phone rings. Return true if you should answer it. Normally you answer, except in the morning
@@ -487,15 +384,8 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-		if ( isAsleep == true) { return false;}
-		else if (( isMorning == true) && ( isMom == true)) {
-			return true;
-		} else if ( isMorning == false) {
-			return true;
-		} return false;
+		return false;
 	}
-		
-	
 
 	/*
 	 30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
@@ -507,13 +397,8 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		if (( tea < 5) || ( candy < 5)) {
-			return 0; }
-		else if (( tea / candy >= 2) || ( candy / tea >= 2)) {
-			return 2; }
-		return 1;
-		}
-	
+		return 0;
+	}
 
 	/*
 	 31. Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
@@ -522,11 +407,8 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
-		if (( a + b == c) || ( a + c == b) || ( b + c == a )) {
-			return true;}
 		return false;
-		}
-	
+	}
 
 	/*
 	 32. Given three ints, a b c, return true if b is greater than a, and c is greater than b. However, with
@@ -536,13 +418,8 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		if (( bOk == true) && ( c > b)) {
-			return true;
-		}else if (( b > a) && ( c > b)) {
-			return true;}
 		return false;
-		}
-	
+	}
 
 	/*
 	 33. Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11,
@@ -553,13 +430,8 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		if (( equalOk == true) && ( a <= b) && ( b <= c)) {
-			return true;}
-		else if ((a < b) && ( b < c)) {
-			return true;}
-		return false;}
-		
-	
+		return false;
+	}
 
 	/*
 	 34. Given 3 int values, a b c, return their sum. However, if one of the values is the same as another
@@ -569,17 +441,8 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		if (( a == b) && ( a != c)) {
-			return c;
-		} if (( a == c) && ( a != b)) {
-			return b;
-		} if (( b == c) && ( b != a)) {
-			return a;}
-		if ( a == b && a == c) {
-			return 0;}
-		return a + b + c;
-		}
-	
+		return 0;
+	}
 
 	/*
 	 35. Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not
@@ -592,14 +455,7 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		if ( a == 13 && b == 13) {
-			return 0;
-		} else if ( b == 13) {
-			return a;
-		} else if (a == 13)
-		{ return c;
-		} else if ( c == 13) {
-			return a + b;
-		} return a + b + c;}
-		}
-	
+		return 0;
+	}
+
+}

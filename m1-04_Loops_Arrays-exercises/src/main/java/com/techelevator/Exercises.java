@@ -10,9 +10,11 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
-		return false;
+		if (nums[0] == 6 || nums[nums.length - 1] == 6) {
+		return true;
 	}
-
+	return false;
+	}
 	/*
 	 2. Given an array of ints, return true if the array is length 1 or more, and the first element and
 	 the last element are equal.
@@ -29,7 +31,7 @@ public class Exercises {
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		return new int[] {};
+		return new int[] {3, 1, 4};
 	}
 
 	/*
@@ -61,7 +63,7 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		return new int[] {};
+		return new int[] {nums[1], nums[2], nums[0]};
 	}
 
 	/*
