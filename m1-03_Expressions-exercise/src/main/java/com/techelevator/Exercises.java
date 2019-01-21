@@ -221,7 +221,9 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
-		if (((a >= 30 && a <= 40 || a >= 40 && a <= 50) && (b >= 30 && b <=40 || b >=40 && b <= 50)))
+		if ((a >= 30 && a <= 40 && b >= 30 && b <= 40))
+			return true;
+		if (a >= 40 && a <=50 && b >=40 && b <= 50)
 			return true;
 		return false;
 	}
