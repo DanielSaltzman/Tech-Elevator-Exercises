@@ -44,7 +44,12 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return null;
+		
+		String start = out.substring(0, 2);
+		String end = out.substring(2);
+		
+		String newString = start + word + end;
+		return newString;
 	}
 
 	/*

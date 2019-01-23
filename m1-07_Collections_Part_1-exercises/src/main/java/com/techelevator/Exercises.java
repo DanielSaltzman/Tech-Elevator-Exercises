@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
-
+//Should try using for each loops
 public class Exercises {
 
 	/*
@@ -43,7 +43,15 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		List<String> words = new ArrayList<String>();
+		
+		for (String nextWord : stringArray) {
+			if (nextWord.length() != 4) {
+				words.add(nextWord);
+			}
+		}
+		
+		return words;
 	}
 
 
