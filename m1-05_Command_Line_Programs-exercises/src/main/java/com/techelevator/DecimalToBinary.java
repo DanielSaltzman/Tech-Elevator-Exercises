@@ -21,9 +21,9 @@ public class DecimalToBinary {
 		String[] userArray = decimalString.split(" ");
 		
 		for (int i = 0; i < userArray.length; i++) {
-			//int decimalValues = Integer.parseInt(userArray[i]);
-			String decimalValues = Integer.toBinaryString(i);
-			System.out.println(userArray + " in binary is " + decimalValues );
+			int userValues = Integer.parseInt(userArray[i]);
+			String decimalValues = Integer.toBinaryString(userValues);
+			System.out.println(userValues + " in binary is " + decimalValues);
 			
 			
 			
