@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
-//Should try using for each loops
+
 public class Exercises {
 
 	/*
@@ -22,7 +23,13 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		List<String> array2List = new ArrayList<String>();
+		
+		for( String answers : stringArray) {
+			array2List.add(answers);
+		
+		}
+		return array2List;
 	}
 	
 	/*
@@ -32,7 +39,14 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		
+		String[] stringToArray = new String[stringList.size()];
+		
+		for ( int i = 0; i < stringList.size(); i++) {
+			stringToArray[i] = stringList.get(i);
+		}
+		
+		return stringToArray;
 	}
 	
 	/*
@@ -64,7 +78,16 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		
+		Stack<String> stacked = new Stack<String>();
+		List<String> myString = new ArrayList<String>();
+		stacked.addAll(stringList);
+		
+		for (String reversed : stringList) {
+			myString.add(stacked.pop());
+		}
+		
+		return myString;
 	}
 
 	/*
@@ -74,7 +97,13 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		
+		List<Double> divided = new ArrayList<Double>();
+		
+		for(Integer getsDivided : intArray) {
+			divided.add(getsDivided / 2.0);
+		}
+		return divided;
 	}
 	
 	/*
@@ -84,7 +113,15 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		int largestInt = 0;
+		
+		for(Integer largestValue : integerList) {
+			if(largestValue > largestInt) {
+				largestInt = largestValue;
+			}
+		}
+		return largestInt;
+		
 	}
 	
 	/*
@@ -94,7 +131,16 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]  
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> odds = new ArrayList<Integer>();
+		
+		for(Integer values : integerArray) {
+			if(values % 2 != 0) {
+				odds.add(values);
+			}
+		}
+		
+		
+		return odds;
 	}
 	
 	/* 
@@ -105,7 +151,16 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		int numbers = 0;
+		for (int values : integerList) {
+			if (values == intToFind) {
+				numbers++;
+			}
+		}
+			if(numbers == 2) {
+				return true;
+			}
+			return false;
 	}
 	
 	/*

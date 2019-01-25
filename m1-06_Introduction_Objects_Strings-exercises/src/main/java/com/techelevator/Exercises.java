@@ -236,7 +236,7 @@ public class Exercises {
 	public String nTwice(String str, int n) {
 		if(str.length() >= n) {
 			return str.substring(0, n) + str.substring(str.length() - n, str.length());
-		}{
+		} else {
 		return str;
 		}
 	}
@@ -314,7 +314,7 @@ public class Exercises {
 	public String frontTimes(String str, int n) {
 		return null;
 	}
-
+//ran out of time, will finish the remaining exercises and resubmit
 	/*
 	 Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
 	 countXX("abcxx") → 1
