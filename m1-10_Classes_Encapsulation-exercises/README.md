@@ -45,7 +45,7 @@ After completing this exercise, students will understand:
 
 The `HomeworkAssignment` class has a single constructor. It accepts a single argument `possibleMarks`.
 
-    `public HomeworkAssignment(int possibleMarks)`
+    
 
 ### FruitTree
 
