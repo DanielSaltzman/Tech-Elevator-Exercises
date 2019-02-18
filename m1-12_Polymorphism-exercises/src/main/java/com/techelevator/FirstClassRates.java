@@ -1,4 +1,4 @@
-package com.techelevator.deliverydriver;
+package com.techelevator;
 
 public class FirstClassRates implements DeliveryDriver {
 	
@@ -34,10 +34,10 @@ public class FirstClassRates implements DeliveryDriver {
 	 	return rate;
 }
 	public String toString() {
-		String formatted = String.format("$%2f", calculateRate(distanceInMiles, weightInOunces));
-		String formattedClass = "FirstClassRate (" + this.mailClass;
+		String formatted = String.format("$%.2f", calculateRate(distanceInMiles, weightInOunces));
+		String formattedClass = "Postal Service (" + this.mailClass;
 		if(mailClass == 1) {
-			formattedClass +=  "st class";
+			formattedClass +=  "st class)";
 		}
 			return String.format("%1$-31s %2$s", formattedClass, formatted); 
 	}

@@ -1,11 +1,16 @@
-package com.techelevator.deliverydriver;
+package com.techelevator;
 
 public class FexEd implements DeliveryDriver {
 
 	private int distanceInMiles;
-	private double weightInOunces;
+	private int weightInOunces;
 	
-	public FexEd(int distanceInMiles, double weightInOunces) {
+	public String toString() {
+		String formatted = String.format("$%.2f", calculateRate(distanceInMiles, weightInOunces));
+		return String.format("%1$-31s %2$s", "FexEd", formatted);
+	}
+	
+	public FexEd(int distanceInMiles, int weightInOunces) {
 			
 		this.distanceInMiles = distanceInMiles;
 		this.weightInOunces = weightInOunces;

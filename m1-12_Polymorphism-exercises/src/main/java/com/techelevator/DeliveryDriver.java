@@ -1,4 +1,4 @@
-package com.techelevator.deliverydriver;
+package com.techelevator;
 
 public interface DeliveryDriver {
 	
