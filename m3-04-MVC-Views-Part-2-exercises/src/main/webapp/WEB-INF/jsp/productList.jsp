@@ -20,9 +20,11 @@
         
     </nav>
     <section id="main-content">
-
+		
+		<c:forEach var="product" items="${productList}">
+		${product.name} <br />
        
-
+		</c:forEach>
     </section>
 </body>
 </html>

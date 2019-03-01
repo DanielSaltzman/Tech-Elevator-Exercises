@@ -14,4 +14,121 @@
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
   
+  body {
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+    grid-template-areas: 
+        "logo1 logo2"
+        "nav 2400"
+        ". descriptions"
+        ". copyright";
+    grid-gap: 20px;
+    background-color: rgba(192, 192, 192, 0.1);
+  }
+
+  section {
+    grid-area: descriptions;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "WeDo OurWork Contact";
+  }
+
+  #what-we-do { 
+    grid-area: WeDo;
+    padding: 10px;
+    border-right: 1px solid;
+    padding: 20px;
+    border-right: 1px solid rgba(170, 239, 135, 0.8);
+    padding-right: 20px;
+    font-weight: none;
+  }
+
+  #our-work {
+    grid-area: OurWork;
+    padding: 10px;
+    border-right: 1px solid rgba(170, 239, 135, 0.8);
+    padding-right: 20px;
+    padding-left: 20px;
+
+  }
+
+  #contact-us {
+    grid-area: Contact;
+    padding: 10px;
+    padding-left: 20px;
+  }
+
+  section h2 {
+    color:#8cc36f;
+  }
+
+  aside img {
+    grid-area: logo1;
+    height: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+  }
+
+  aside {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 173, 238, 0.4);
+  }
+
+  header img {
+    grid-area: logo2;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+
+
+  main > img {
+    grid-area: 2400;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #social {
+    display: none;
+  }
+
+  header {
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  header p {
+    display: none;
+  }
   
+  nav a {
+   display: block;
+   color: #00adee;
+   text-decoration: none;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+   width: 125px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 16px;
+   padding-bottom: 16px;
+   border-bottom: 1px solid;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul:nth-child(3) {
+    border-bottom: 0px; 
+  }
+
+
+  
+
+
