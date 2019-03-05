@@ -22,7 +22,13 @@
     <section id="main-content">
 		
 		<c:forEach var="product" items="${productList}">
-		${product.name} <br />
+			 
+			${product.name}
+						
+				<img src="/img/${product.imageName}">
+			
+		
+		
        
 		</c:forEach>
     </section>
