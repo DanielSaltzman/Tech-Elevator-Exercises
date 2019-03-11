@@ -1,27 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ include file="common/header.jsp" %>
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Product Tiles View</title>
-    <link rel="stylesheet" href="css/site.css" />
-</head>
-<body>
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-        </ul>
-        
-    </nav>
-    <section id="main-content">
-    <h1>Toy Department</h1>
 		<div class="flexContainer">
 				
 			<c:forEach var="product" items="${productList}">
@@ -34,7 +14,7 @@
 						</a>
 					<div class="flexContainerTextTiles">
 						<h4 class="link">
-							<a href="${productDetailURL}">${product.name}</a>
+							<a href="${productDetailURL}"><c:out value="${product.name}"/></a>
 						</h4>
 					</div>
 				<div class="price">
@@ -44,7 +24,7 @@
 						</c:when>
 					</c:choose>
 				</div>
-					by ${product.manufacturer}
+					by <c:out value="${product.manufacturer}"/>
 					
 				<div class="blue">
 					<c:choose>
@@ -58,7 +38,7 @@
 					<fmt:formatNumber value="${product.price}" type="currency"/>
 				</div>
 				<div>
-				weight ${product.weightInLbs} lbs
+				weight <c:out value="${product.weightInLbs}"/> lbs
 				</div>
 				<fmt:formatNumber type="number" maxFractionDigits="0" value="${product.averageRating}" var="starsImage"/>
 					<img class="ratingTiles" src="img/${starsImage}-star.png" alt="stars"/>
@@ -70,8 +50,5 @@
 			
 			
 			</div>
-       
-
-    </section>
-</body>
-</html>
+			
+<%@ include file="common/footer.jsp" %>

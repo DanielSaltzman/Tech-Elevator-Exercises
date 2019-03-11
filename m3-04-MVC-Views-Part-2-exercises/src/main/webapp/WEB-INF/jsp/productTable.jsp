@@ -1,30 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Product Table View</title>
-    <link rel="stylesheet" href="css/site.css" />
-</head>
-<body>
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-        </ul>
-        
-    </nav>
-    <section id="main-content">
-     	<div>
-     	<h1 id="tableTitle">Toy Department</h1>
-     	</div>
+<%@ include file="common/header.jsp" %>
+     	
 
        	<table id="productTable">
        		<tr class="tablePics">
@@ -56,7 +32,7 @@
        						<c:url var="productDetailUrl" value="/productDetail">
        							<c:param name="productId" value="${product.productId}"/>
        						</c:url>
-       						<td ><a href="${productDetailURL}">${product.name}</a></td>
+       						<td ><a href="${productDetailURL}"><c:out value="${product.name}"/></a></td>
        					</c:forEach>
        			</tr>
        			
@@ -70,26 +46,21 @@
        			
        			<tr class="gray"> <th>Mfr</th>
        			<c:forEach var="product" items="${productList}">
-       				<td class="gray">${product.manufacturer}</td>
+       				<td class="gray"><c:out value="${product.manufacturer}"/></td>
        			</c:forEach>
        			</tr>
        			
        			<tr>
        				<th>Price</th>
        				<c:forEach var="product" items="${productList}">
-       					<td>${product.price}</td>
+       					<td><c:out value="${product.price}"/></td>
        				</c:forEach>
        			</tr>
        			
        			<tr class="gray"> <th>wt. (in lbs.)</th>
        				<c:forEach var="product" items="${productList}">
-       					<td>${product.weightInLbs}</td>
+       					<td><c:out value="${product.weightInLbs}"/></td>
        				</c:forEach>
        			</tr>
        		</table>
-       				
-    
-
- </section>
- </body>
- </html>
+<%@ include file="common/footer.jsp" %>
