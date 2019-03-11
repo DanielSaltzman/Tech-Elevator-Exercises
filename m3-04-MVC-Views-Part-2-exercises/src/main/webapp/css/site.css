@@ -56,3 +56,95 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+.imageList {
+	display:block;
+	height:150px;
+	width:200px
+	
+}
+#starRate{
+	height:20px;
+	width:60%;
+	
+}
+.single {
+	display:flex;
+	width:100%;
+}
+.names{
+	display:block;
+}
+#bestSeller{
+	display:inline-block;
+	text-decoration:none;
+	color:red;
+}
+
+#tablePicture1{
+	height:75px;
+}
+
+#tablePicture2{
+	height:75px;
+}
+
+#tablePicture3{
+	height:75px;
+}
+
+#tablePicture4{
+	height:75px;
+}
+
+#tablePicture5{
+	height:75px;
+}
+
+#tablePicture6{
+	height:75px;
+}
+#name{
+	border-color:#808080;
+}
+tr.gray{
+	background-color:gray;
+}
+tr.gray > th{
+	background-color: white;
+	grid-auto-rows:100%;
+	max-width:50%;
+	
+}
+.productTable{
+	border-collapse:collapse;
+}
+
+.productImage{
+	width:80%;
+}
+
+.flexContainer{
+	
+	display:block;
+	
+	
+}
+.flexContainerTile{
+	display:inline-block;
+	width:33%
+}
+.ratingTiles{
+	height: 20px;
+	width: 60%;
+}
+.blue{
+	color:blue;
+}
+
+
+.link a{
+	text-decoration: none;
+	color:black;
+}
+
