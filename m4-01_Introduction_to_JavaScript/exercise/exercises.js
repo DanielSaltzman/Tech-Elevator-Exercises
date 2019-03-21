@@ -99,18 +99,25 @@
  }
 
  function filterBigNumbers(nums){
-     numsArray = [];
+    let numsArray = [];
     
      for(let i = 0 ; i < nums.length; i++){
          if(nums[i] >= 100){
-            return numsArray.push(nums[i]);
+            numsArray.push(nums[i]);
          }
     }  
      return numsArray;
  }
 
-function filterMultiplesOfX(){
-    
+function filterMultiplesOfX(numsToFilter, number){
+    let x = number;
+  return numsToFilter.filter((number) => {
+      if(number % x === 0){
+          return true;
+      }else{
+          return false;
+      }
+  });
 }
 
 
