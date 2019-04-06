@@ -2,22 +2,32 @@
     <div class="shopping-list">
         <h1>My Shopping List</h1>
         <ul>
-            <li class="completed">Oatmeal</li>
-            <li class="completed">Milk</li>
-            <li class="completed">Banana</li>
-            <li>Strawberries</li>
-            <li>Lunch Meat</li>
-            <li>Bread</li>
-            <li>Grapes</li>
-            <li>Steak</li>
-            <li>Salad</li>
+            <li v-for="item in groceries" v-bind:key="item.id" v-bind:class="{ completed: item.completed }">
+                {{item.name}} 
+                <i class="far fa-check-circle" v-bind:class="{ completed: item.completed }"></i>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+            groceries: [
+                { name: 'Oatmeal', completed: false },
+                { name: 'Milk', completed: true },
+                { name: 'Banana', completed: false },
+                { name: 'Strawberries', completed: true },
+                { name: 'Lunch Meat', completed: true},
+                { name: 'Bread', completed: true },
+                { name: 'Grapes', completed: false },
+                { name: 'Steak', completed: true },
+                { name: 'Salad', completed: false }
+            ]
+        }
+    },
+   
 }
 </script>
 
@@ -56,5 +66,18 @@ li:last-child{
 li.completed {
     text-decoration: line-through;
     color:darkgrey;
+}
+i.far.fa-check-circle { 
+    float:right;
+    color: darkgray;
+}
+
+i.far.fa-check-circle.completed {
+    color:green;
+}
+input[type="checkbox"] {
+    font-size:40px;
+    vertical-align: middle;
+    margin-top:0px;
 }
 </style>
