@@ -38,6 +38,19 @@ function addTodos() {
   todoList.appendChild(ul);
 }
 
-init();
-addPageTitle();
-addTodos();
+document.addEventListener("DOMContentLoaded", () => {
+  init()
+  addPageTitle()
+  addTodos()
+})
+
+const tasks = document.querySelectorAll('li');
+
+tasks.forEach((task) => {
+  task.addEventListener('click', () => {
+    if( !task.hasAttribute('class', 'completed') ) {
+      task.classList.add('completed')
+      task.querySelectorAll('i').classList.add('completed')
+    }
+  })
+});

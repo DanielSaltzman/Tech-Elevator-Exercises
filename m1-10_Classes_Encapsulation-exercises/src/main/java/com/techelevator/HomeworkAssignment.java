@@ -48,16 +48,4 @@ public String getLetterGrade() {
 		return possibleMarks;
 }
 
-
-
-
-
-
- 
-
-
-
-
-
-
 }
